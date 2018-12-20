@@ -1,0 +1,44 @@
+@import '../../assets/sass/colors';
+
+footer{
+    background: $darkColor;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 22px;
+    text-align: center;
+    div{
+        &:first-child{
+            width: 50%;
+            float: left;
+            p{
+                padding: 0;
+                margin: 0;
+                a{
+                    margin: 0 5px;
+                    text-decoration: none;
+                }
+                &:first-child{
+                    padding-bottom: 5px;
+                }
+            }
+
+        }
+        &:nth-child(2){
+            width: 50%;
+            float: left;
+        }
+    }
+}
+@media(max-width:578px){
+    footer{
+        div{
+            &:first-child{
+                width: 100%;
+    
+            }
+            &:nth-child(2){
+                width: 100%;
+            }
+        }
+    }
+}

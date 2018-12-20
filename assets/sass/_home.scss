@@ -1,0 +1,14 @@
+@import '../../assets/sass/colors';
+@import '../../assets/sass/share';
+@import '../../components/header/header';
+@import '../../components/skills/skills';
+@import '../../components/footer/footer.scss';
+@import '../../components/projects/projects.scss';
+
+body{
+    background-color: $midColor;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $lightColor;
+    padding: 0;
+    margin: 0;
+}

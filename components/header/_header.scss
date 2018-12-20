@@ -1,0 +1,24 @@
+@import '../../assets/sass/colors';
+
+.header{
+    width: 100%;
+    padding-top: 20px; 
+    text-align: center;
+
+    img{
+        border-radius:50%;
+        padding: 5px;
+        max-width: 250px;
+        background-color: $darkColor;
+    }
+    h3{
+        text-align: left;
+    }
+    p{
+        text-align: left;
+        line-height: 30px;
+        color:$lightColor;
+        font-size: 18px;
+        padding: 0 50px;
+    }
+}

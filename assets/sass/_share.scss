@@ -1,0 +1,22 @@
+@import './colors';
+%next_prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    color: $vDarkColor;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        color: $lightColor;
+        background-color: rgba($darkColor, 0.3);
+      }
+
+}
