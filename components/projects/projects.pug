@@ -1,50 +1,74 @@
 .projects
     h2 Projects
-    button#btn calc
+    p in this app i am using angular v 7 with angular material
+    div(class="slider-container")
+        div(class="slide cv") 
+            img( src="assets/images/cv/cv-home-with-navbar.png", alt='login page', style="width:100%; min-height:100%;")
+        div(class="slide cv") 
+            img( src="assets/images/cv/cv-project.png", alt='register page',style="width:100%; min-height:100%;")
+        div(class="slide cv") 
+            img( src="assets/images/cv/cv-see-image.png", alt='yoda home page',style="width:100%; min-height:100%;")
+        div(class="slide cv") 
+            img( src="assets/images/cv/cv-shoes-shop.png", alt='yoda home page',style="width:100%; min-height:100%;")
+        div(class='slide cv')
+            iframe(frameborder,
+                    allowfullscreen="allowfullscreen" ,
+                    class="iframe",
+                    mozallowfullscreen="mozallowfullscreen", 
+                    msallowfullscreen="msallowfullscreen", 
+                    oallowfullscreen="oallowfullscreen", 
+                    src="https://www.youtube.com/embed/S9kgX9EdNkA?autoplay=0&amp;controls=5&amp;showinfo=1&amp;autohide=1", 
+                    webkitallowfullscreen="webkitallowfullscreen",
+                    style="width:100%;")
+        a(class="prev", data='cv') &#10094;
+        a(class="next", data='cv') &#10095; 
+
     h3 Shoes Shop
-    p this is my first app using #mangodb #express #nodejs and #angular
+    p Shoes Shop is my first project using mangodb, express, nodejs, angular and bootstrap
     div(class="project")#shoesShop1
     div(class="slider-container")
         div(class="slide shoes-shop") 
-            div(class="numbertext") login page
-            img( src="assets/images/login.png", alt='login page', style="width:100%; min-height:100%;")
+            img( src="assets/images/shoes_shop/login.png", alt='login page', style="width:100%; min-height:100%;")
         div(class="slide shoes-shop") 
-            div(class="numbertext") register page
-            img( src="assets/images/register.png", alt='register page',style="width:100%; min-height:100%;")
+            img( src="assets/images/shoes_shop/register.png", alt='register page',style="width:100%; min-height:100%;")
         div(class="slide shoes-shop")
-            div(class="numbertext") home page
-            img( src="assets/images/home.png", alt='home page', style="width:100%; min-height:100%;")
+            img( src="assets/images/shoes_shop/home.png", alt='home page', style="width:100%; min-height:100%;")
         div(class="slide shoes-shop")
-            div(class="numbertext") contact page
-            img( src="assets/images/contact.png", alt='contact page', style="width:100%; min-height:100%;")
+            img( src="assets/images/shoes_shop/contact.png", alt='contact page', style="width:100%; min-height:100%;")
         div(class="slide shoes-shop")
-            div(class="numbertext") cart page
-            img( src="assets/images/cart.png", alt='cart page', style="width:100%; min-height:100%;")
+            img( src="assets/images/shoes_shop/cart.png", alt='cart page', style="width:100%; min-height:100%;")
         div(class="slide shoes-shop")
-            div(class="numbertext") product information page
-            img( src="assets/images/product-info.png", alt='product information page', style="width:100%; min-height:100%;")
-        a#prevShoeShop(class="prev") &#10094;
-        a#nextShoeShop(class="next") &#10095; 
+            img( src="assets/images/shoes_shop/product-info.png", alt='product information page', style="width:100%; min-height:100%;")
+        div(class='slide shoes-shop')
+            iframe(frameborder,
+                    allowfullscreen="allowfullscreen" ,
+                    class="iframe",
+                    mozallowfullscreen="mozallowfullscreen", 
+                    msallowfullscreen="msallowfullscreen", 
+                    oallowfullscreen="oallowfullscreen", 
+                    src="https://www.youtube.com/embed/RIcyCrnW154?autoplay=0&amp;controls=5&amp;showinfo=1&amp;autohide=1", 
+                    webkitallowfullscreen="webkitallowfullscreen",
+                    style="width:100%;")
+        a(class="prev", data='shoes-shop') &#10094;
+        a(class="next", data='shoes-shop') &#10095; 
     h3 Yoda
-    p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi nesciunt? Quam distinctio adipisci debitis facere possimus expedita incidunt culpa impedit unde consequatur dignissimos recusandae et, ab provident perferendis dolores.
+    p Yoda is my favorit app in my projects using mangodb, express, nodejs, angular, angular material, and some other module like socket io, passport jwt
     div(class="slider-container")
         div(class="slide yoda") 
-            div(class="numbertext") yoda
-            img( src="assets/images/yoda-login.png", alt='login page', style="width:100%; min-height:100%;")
+            img( src="assets/images/yoda/yoda-login.png", alt='login page', style="width:100%; min-height:100%;")
         div(class="slide yoda") 
-            div(class="numbertext") yoda
-            img( src="assets/images/yoda-register.png", alt='register page',style="width:100%; min-height:100%;")
-        div(class="slide yoda")
-            div(class="numbertext") yoda
-            img( src="assets/images/yoda-home.png", alt='home page', style="width:100%; min-height:100%;")
-        div(class="slide yoda")
-            div(class="numbertext") yoda
-            img( src="assets/images/contact.png", alt='contact page', style="width:100%; min-height:100%;")
-        div(class="slide yoda")
-            div(class="numbertext") yoda
-            img( src="assets/images/cart.png", alt='cart page', style="width:100%; min-height:100%;")
-        div(class="slide yoda")
-            div(class="numbertext") yoda
-            img( src="assets/images/product-info.png", alt='product information page', style="width:100%; min-height:100%;")
-        a#prevYoda(class="prev") &#10094;
-        a#nextYoda(class="next") &#10095; 
+            img( src="assets/images/yoda/yoda-register.png", alt='register page',style="width:100%; min-height:100%;")
+        div(class="slide yoda") 
+            img( src="assets/images/yoda/yoda-home.png", alt='yoda home page',style="width:100%; min-height:100%;")
+        div(class='slide yoda')
+            iframe(frameborder,
+                    allowfullscreen="allowfullscreen" ,
+                    class="iframe",
+                    mozallowfullscreen="mozallowfullscreen", 
+                    msallowfullscreen="msallowfullscreen", 
+                    oallowfullscreen="oallowfullscreen", 
+                    src="https://www.youtube.com/embed/xIfHikwYUsw?autoplay=0&amp;controls=5&amp;showinfo=1&amp;autohide=1", 
+                    webkitallowfullscreen="webkitallowfullscreen",
+                    style="width:100%;")
+        a(class="prev", data='yoda') &#10094;
+        a(class="next", data='yoda') &#10095; 

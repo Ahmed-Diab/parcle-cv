@@ -1,5 +1,5 @@
 "use strict";
-import './components/projects/headar';
+import './components/projects/projects.js';
 // var shoesShop1 = document.getElementById('shoesShop1');
 // var shoesShop1Span = document.getElementById('shoesShop1Span');
 

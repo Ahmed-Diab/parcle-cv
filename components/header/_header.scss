@@ -13,12 +13,21 @@
     }
     h3{
         text-align: left;
+        padding: 0px;
+        margin: 10px 0 0 0;
     }
     p{
         text-align: left;
         line-height: 30px;
         color:$lightColor;
         font-size: 18px;
-        padding: 0 50px;
+        margin: 0;
+    }
+}
+@media(max-width:578px){
+    .header{
+        p{
+            padding: 0 0 0 5px !important;
+        }
     }
 }

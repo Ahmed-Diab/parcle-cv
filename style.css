@@ -30,3 +30,9 @@
     opacity: .5;
     height: 100%;
 }
+@media(max-width:778px){
+    .container{
+        width: 95% !important;
+        margin: auto;
+    }
+}

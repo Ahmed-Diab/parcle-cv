@@ -3,9 +3,11 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
+    // height: 50px;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
+    // margin-top: -50px;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -13,10 +15,11 @@
     -webkit-user-select: none;
     color: $vDarkColor;
     transition: all ease-in-out .3s;
+    background-color: rgba($darkColor, 0.5);
 
     &:hover {
         color: $lightColor;
-        background-color: rgba($darkColor, 0.3);
+        background-color: rgba($darkColor, 1);
       }
 
 }

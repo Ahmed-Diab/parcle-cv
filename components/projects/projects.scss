@@ -4,202 +4,114 @@
     .projects{
         padding: 10px 0;
         min-height: 300px;
-    }
-//         h3{
-//             margin-bottom: 0;
-//         }
-//       .project{
-//                 width: 300px;
-//                 height: 184px;
-//                 margin: 5px;
-//                 float: left;
-//                 transition: all ease .5s;
-//                 position: relative;
-//                 overflow: hidden !important;
-//                 span{
-//                     position: absolute;
-//                     top: 5px;
-//                     right: 35px;
-//                     width: 10px;
-//                     height: 10px;
-//                     z-index: 300;
-//                 }
-//                 .img{
-//                     width: 100%;
-//                     height: 100%;
-//                     transition: all ease-in-out .3s;
+        .slider-container{
+          position: relative;
+          .prev{
+            // color:$lightColor;
+          }
+      /* Hide the images by default */
+          .slide{
+            // display: none;
+            width: 100% !important;
+            transition: all ease-in-out 1s !important;
+      /* Number text (1/3 etc) */
+            .des-text {
+              color: $lightColor;
+              font-size: 18px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+              display: inline;
+              background-color: rgba($vDarkColor, 0.3);
+              text-transform: capitalize;
+      
+            }
+            iframe{
+              height: 500px;
+            }
+      
+          }
+          .yoda{
+            display: none;
+            .des-text{
+              background-color: rgba($darkColor, 0.3);
+              color: $vDarkColor;
+            }
+          }
+          .shoes-shop{
+            display: none;
+          }
+          .cv{
+            display: none;
+            a{
 
-//                 }
-//                 &::before{
-//                     transition: all ease-in-out .3s;
-//                     content: '';
-//                     height: 100%;
-//                     position: absolute;
-//                     display: block;
-//                     left: 0;
-//                     right: 0;
-//                     bottom: 0;
-//                     width: 0%;
-//                     background-color: rgba(#000000, .3);
-//                     z-index: +200;
-//                     cursor: pointer;
-//                 }
-//                 &::after{
-//                     content: 'Shoes Shop';
-//                     position: absolute;
-//                     top: 90%;
-//                     left: 50%;
-//                     color: $lightColor;
-//                     z-index: +200;
-//                     font-weight: bold;
-//                     font-size: 20px;
-//                     transition: all ease-in-out .5s;
-//                     opacity: 0;
-//                     cursor: pointer;
+            }
+          }
+      /* Container for image text */
+          .caption-container {
+            text-align: center;
+            background-color: rgba($lightColor, 0.3);
+            padding: 10px;
+            text-transform: capitalize;
+            color: $lightColor;
 
-//                 }
-//                 &:hover{
-//                     &::before{
-//                         width: 100%;
-//                     }
-//                     &::after{
-//                         top: 50%;
-//                         opacity: 1;
-//                         transform: translateX(-50%) translateY(-50%);
-//                     }
-//                     img{
-//                         transform:scale(1.1);
-//                     }
-//                 }
-//             }
-//             .p-contanir{
-//                 margin: 0px;
-//                 display: inline-block;
-//                 height: 200px;
-//                 margin: 0px;
-//                 display: block;
-//                 border: 10px solid transparent;
-//                 overflow: auto !important;
-//                 // display: none;
-//             }
-//     }
-// .d-fixed{
-//     position: fixed !important;
-//     top: 50%;
-//     left: 50%;
-//     transform: translateX(-50%) translateY(-50%);
-//     z-index: +100;
-//     width: 70% !important;
-//     float: left !important;
-//     overflow: auto !important;
-//     img{
-//         width: 50% !important;
-//         height: 100% !important;
-//         float: left;
-
-//     }
-//     &::before{
-//         background-color: transparent !important;
-//         display: none !important;
-
-//     }
-//     &::after{
-//         display: none !important;
-//         color: transparent !important;
-//     }
-//     &:hover{
-//         img{
-//             transform: scale(1) !important;
-
-//         }
-//     }
-//     .p-contanir{
-//         width: 50% !important;
-//         overflow: auto !important;
-//         float: left !important;
-//         display: block !important;
-//     }
-    
-// }
-
-.slider-container{
-    position: relative;
-/* Hide the images by default */
-    .slide{
-      // display: none;
-      width: 100% !important;
-      transition: all ease-in-out 1s !important;
-/* Number text (1/3 etc) */
-      .numbertext {
-        color: $lightColor;
-        font-size: 18px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-        display: inline;
-        background-color: rgba($vDarkColor, 0.3);
-
-      }
-
-    }
-    .yoda{
-      display: none;
-    }
-    .shoes-shop{
-      display: none;
-    }
-/* Container for image text */
-    .caption-container {
-      text-align: center;
-      background-color: rgba($lightColor, 0.3);
-      padding: 10px;
-      text-transform: capitalize;
-      color: $lightColor;
-      p{
-        margin: 0px;
-      }
-  }
-  .row{
-    min-height: 50px;
-
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .column {
-      float: left;
-      width: 16.66%;
-      height: 50px;
-      .active{
-        opacity: 1 !important;
-        
-      }
-      .demo {
-        opacity: 0.6;
-        height: 100%;;
-        transition: all ease .5s;
-        &:hover {
-          opacity: 1;
+            p{
+              margin: 0px;
+            }
         }
-      }
-    }
-  }
-/* Next & previous buttons */
-  .next {
-      @extend %next_prev;
-      right: 5px !important;
-      border-radius: 3px 0 0 3px;
+        .row{
+          min-height: 50px;
 
-    }
-  .prev{
-      @extend %next_prev;
-      left : 5px;
+          &::after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          .column {
+            float: left;
+            width: 16.66%;
+            height: 50px;
 
+            .active{
+              opacity: 1 !important;
+              
+            }
+            .demo {
+              opacity: 0.6;
+              height: 100%;;
+              transition: all ease .5s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      /* Next & previous buttons */
+        .next {
+            @extend %next_prev;
+            right: 5px !important;
+            border-radius: 3px 0 0 3px;
+      
+          }
+        .prev{
+            @extend %next_prev;
+            left : 5px;
+          }
+        }
     }
 
-  }
+
 
   .cursor {
     cursor: pointer;
+  }
+
+  @media(max-width:778px){
+    .slider-container{
+    .slide{
+      iframe{
+        height: 250px !important;
+      }
+    }
+  }
   }

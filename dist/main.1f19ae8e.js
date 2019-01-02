@@ -104,95 +104,61 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"components/projects/headar.js":[function(require,module,exports) {
+})({"components/projects/projects.js":[function(require,module,exports) {
+'use strict';
+
 var slideIndex = 1;
-var nextShoeShop = document.getElementById('nextShoeShop');
-var prevShoeShop = document.getElementById('prevShoeShop');
-var nextYoda = document.getElementById('nextYoda');
-var prevYoda = document.getElementById('prevYoda');
-var slideIndex = 1;
-showSlidesForShoesShop(slideIndex);
-showSlidesForYoda(slideIndex); // previous controls
+var nextSlide = document.getElementsByClassName('next');
+var prevSlide = document.getElementsByClassName('prev');
+changeSlide(slideIndex, "shoes-shop");
+changeSlide(slideIndex, "yoda");
+changeSlide(slideIndex, "cv");
 
-function plusShoesShop() {
-  showSlidesForShoesShop(slideIndex += 1);
-} // next controls
+for (var i = 0; i < nextSlide.length; i++) {
+  var element = nextSlide[i];
+  element.addEventListener('click', plus);
+}
 
+for (var _i = 0; _i < prevSlide.length; _i++) {
+  var _element = prevSlide[_i];
 
-function previousShoesShop() {
-  showSlidesForShoesShop(slideIndex += -1);
+  _element.addEventListener('click', previous);
 } // previous controls
 
 
-function plusYoda() {
-  showSlidesForYoda(slideIndex += 1);
+function plus(e) {
+  var className = e.target.getAttribute('data');
+  changeSlide(slideIndex += 1, className);
 } // next controls
 
 
-function previousYoda() {
-  showSlidesForYoda(slideIndex += -1);
+function previous(e) {
+  var className = e.target.getAttribute('data');
+  changeSlide(slideIndex += -1, className);
 }
 
-function showSlidesForShoesShop(n) {
-  var shoesShop = document.getElementsByClassName("shoes-shop");
+function changeSlide(n, event) {
+  var slideDivs = document.getElementsByClassName("".concat(event));
   var i;
 
-  if (n > shoesShop.length) {
+  if (n > slideDivs.length) {
     slideIndex = 1;
   }
 
   if (n < 1) {
-    slideIndex = shoesShop.length;
+    slideIndex = slideDivs.length;
   }
 
-  for (i = 0; i < shoesShop.length; i++) {
-    shoesShop[i].style.display = "none";
-    shoesShop[i].style.opacity = "0";
+  for (i = 0; i < slideDivs.length; i++) {
+    slideDivs[i].style.display = "none";
+    slideDivs[i].style.opacity = "0";
   }
 
-  shoesShop[slideIndex - 1].style.display = "block";
+  slideDivs[slideIndex - 1].style.display = "block";
   setTimeout(function () {
-    shoesShop[slideIndex - 1].style.opacity = "1";
+    slideDivs[slideIndex - 1].style.opacity = "1";
   }, 50);
-}
-
-function showSlidesForYoda(n) {
-  var yoda = document.getElementsByClassName("yoda");
-  var i;
-
-  if (n > yoda.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = yoda.length;
-  }
-
-  for (i = 0; i < yoda.length; i++) {
-    yoda[i].style.display = "none";
-    yoda[i].style.opacity = "0";
-  }
-
-  yoda[slideIndex - 1].style.display = "block";
-  setTimeout(function () {
-    yoda[slideIndex - 1].style.opacity = "1";
-  }, 50);
-}
-
-nextShoeShop.addEventListener('click', plusShoesShop);
-prevShoeShop.addEventListener('click', previousShoesShop);
-nextYoda.addEventListener('click', plusYoda);
-prevYoda.addEventListener('click', previousYoda);
-
-function test(n, o) {
-  var t = n + o;
-  return t;
-}
-
-var btn = document.getElementById('btn');
-btn.addEventListener('click', function () {
-  console.log(test(8, 9));
-}); // // Thumbnail image controls
+} // // Thumbnail image controls
 // function currentSlide(i) {
 //   showSlides(slideIndex = i);
 // }
@@ -205,8 +171,8 @@ btn.addEventListener('click', function () {
 },{}],"main.js":[function(require,module,exports) {
 "use strict";
 
-require("./components/projects/headar");
-},{"./components/projects/headar":"components/projects/headar.js"}],"../../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./components/projects/projects.js");
+},{"./components/projects/projects.js":"components/projects/projects.js"}],"../../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -233,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43045" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42505" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
